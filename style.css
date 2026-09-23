@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+    color-scheme: light;
+    --background: #f3f6fb;
+    --card: #ffffff;
+    --text: #172033;
+    --muted: #697386;
+    --border: #d9dfeb;
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --focus: rgba(79, 70, 229, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, #eef2ff, var(--background));
+}
+
+.page-wrapper {
+    display: grid;
+    min-height: 100vh;
+    padding: 32px 16px;
+    place-items: center;
+}
+
+.registration-card {
+    width: min(100%, 500px);
+    padding: 40px;
+    background: var(--card);
+    border: 1px solid rgba(217, 223, 235, 0.8);
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(34, 48, 80, 0.12);
+}
+
+.form-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(1.7rem, 4vw, 2.1rem);
+    letter-spacing: -0.03em;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+label {
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 13px;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+select {
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #9aa3b4;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--focus);
+}
+
+small {
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 4px 0 24px;
+}
+
+.checkbox-group input {
+    width: 16px;
+    min-height: 16px;
+    margin-top: 2px;
+    accent-color: var(--primary);
+}
+
+.checkbox-group label {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    min-height: 48px;
+    color: #fff;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    background: var(--primary);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.login-prompt {
+    margin: 24px 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    .registration-card {
+        padding: 28px 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
